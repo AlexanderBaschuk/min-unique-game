@@ -1,0 +1,30 @@
+# It is recommended that you change this to your private RPC URL.
+ethereum_rpc = "https://1rpc.io/holesky"
+drosera_rpc = "https://relay.testnet.drosera.io"
+
+[traps]
+
+[traps.game-of-traps-player]
+path = "./out/PlayerTrap.sol/PlayerTrap.sol.json"
+
+# This is the existing address of the Game of Traps.
+# Don't change the response contract and the response function!
+response_contract = "0xDB5A74A6805DC7570293f56467621B40c706510e"
+response_function = "play(uint256)"
+
+min_number_of_operators = 1
+max_number_of_operators = 2
+
+# Recommended cooldown value: 5
+cooldown_period_blocks = 5
+
+# Sample size 1 is enough for the Game of Traps.
+block_sample_size = 1
+
+# Add your operator address to this whitelist.
+private_trap = true
+whitelist = ["0x..."]
+
+# Insert YOUR existing trap address to update that trap.
+# Or delete the line completely to create a new trap.
+# address="0x..."
